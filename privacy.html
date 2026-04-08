@@ -1,155 +1,186 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>隱私權政策 - 又又買了 YoYoAgain</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
-      line-height: 1.8;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #222;
-      background: #fff;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>又又買了 — 隱私權政策</title>
+<style>
+  :root {
+    --page-bg: #fdf8f0;
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(216, 200, 176, 0.5);
+    --title: #7a6652;
+    --primary: #5e4a36;
+    --secondary: #b5a48e;
+    --section: #a08060;
+    --accent: #c4782a;
+    --divider: #d8c8b0;
+    --shadow: rgba(122, 102, 82, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page-bg: #0a0a0a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --title: #e0e0e0;
+      --primary: #e0e0e0;
+      --secondary: #777777;
+      --section: #999999;
+      --accent: #e8a050;
+      --divider: #333333;
+      --shadow: rgba(0, 0, 0, 0.4);
     }
-    h1, h2 {
-      color: #111;
-    }
-    h1 {
-      margin-bottom: 8px;
-    }
-    .desc {
-      color: #666;
-      margin-bottom: 32px;
-    }
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin-bottom: 28px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .box {
-      background: #f7f7f7;
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin-top: 12px;
-    }
-  </style>
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "PingFang TC", "Helvetica Neue", sans-serif;
+    background: var(--page-bg);
+    color: var(--primary);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 20px 40px;
+  }
+  .container { max-width: 680px; width: 100%; }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--title);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 8px var(--shadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--section);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+  .card p, .card li {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card strong { color: var(--accent); font-weight: 600; }
+  .card ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+  .card li::marker { color: var(--secondary); }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .card a:hover { border-bottom-color: var(--accent); }
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--secondary);
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    body { padding: 40px 16px 32px; }
+    .card { padding: 20px 22px; border-radius: 16px; }
+    h1 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
-  <h1>隱私權政策</h1>
-  <p class="desc">
-    又又買了（YoYoAgain）重視你的隱私。本政策說明本 App 如何處理資料、使用裝置權限，以及與訂閱服務相關的資訊。
-  </p>
+  <div class="container">
+    <h1>隱私權政策</h1>
+    <p class="subtitle">又又買了（YoYoAgain）— 最後更新：2026 年 4 月 8 日</p>
 
-  <section>
-    <h2>1. 開發者資訊</h2>
-    <p>
-      本 App「又又買了（YoYoAgain）」由開發者提供與維護。<br />
-      如你對本隱私權政策有任何疑問，請來信聯絡：<a href="mailto:phoebewulala@gmail.com">phoebewulala@gmail.com</a>
-    </p>
-  </section>
-
-  <section>
-    <h2>2. 我們是否收集你的個人資料</h2>
-    <p>
-      本 App 本身不會向開發者的伺服器收集、儲存、傳輸或分享你的個人資料、衣物資料、照片、價格資訊或使用紀錄。
-    </p>
-    <div class="box">
-      也就是說，開發者無法直接查看、存取或取得你在 App 中建立或保存的內容。
+    <div class="card">
+      <h2>總則</h2>
+      <p>「又又買了」（以下簡稱本 App）尊重並保護使用者的個人隱私。本政策說明本 App 如何處理你的資料。簡單來說：<strong>我們不收集、不傳輸、也無法存取你的任何個人資料</strong>。</p>
     </div>
-  </section>
 
-  <section>
-    <h2>3. 資料儲存方式</h2>
-    <p>你在 App 中建立的資料，可能以下列方式儲存：</p>
-    <ul>
-      <li>儲存在你的裝置本機中</li>
-      <li>若你啟用 Apple iCloud 同步功能，資料可能同步儲存在你的個人 iCloud 帳號中</li>
-    </ul>
-    <p>
-      若你使用 iCloud / CloudKit，同步、儲存與相關安全機制將由 Apple 依其服務架構與隱私政策處理。開發者本身不會直接讀取你個人 iCloud 中的同步內容。
-    </p>
-  </section>
+    <div class="card">
+      <h2>我們不收集任何資料</h2>
+      <p>本 App 不會收集、儲存或傳輸任何個人識別資訊到我們的伺服器，也沒有伺服器。所有資料完全留在你的裝置與你個人的 iCloud 帳號中。</p>
+      <ul>
+        <li>不收集姓名、Email、電話、地址</li>
+        <li>不收集裝置識別碼（IDFA / IDFV）</li>
+        <li>不使用任何第三方分析、廣告、追蹤 SDK</li>
+        <li>不使用 cookies 或類似的追蹤技術</li>
+      </ul>
+    </div>
 
-  <section>
-    <h2>4. 裝置權限使用</h2>
-    <p>本 App 可能會請求以下權限，以提供相關功能：</p>
-    <ul>
-      <li><strong>相機權限：</strong>用於拍攝衣物照片或其他你自行選擇加入 App 的圖片</li>
-      <li><strong>照片／相簿權限：</strong>用於從你的裝置相簿中選取圖片，作為衣物或相關資料紀錄</li>
-    </ul>
-    <p>
-      你可自行決定是否授予這些權限。若你不同意授權，相關功能可能無法正常使用，但不影響其他不需該權限的功能。
-    </p>
-  </section>
+    <div class="card">
+      <h2>資料儲存位置</h2>
+      <p>你在 App 中建立的所有資料（商品、品牌、照片、訂閱狀態快取等）僅儲存於：</p>
+      <ul>
+        <li><strong>你的裝置本機</strong>（透過 SwiftData / 檔案系統 / UserDefaults）</li>
+        <li><strong>你個人的 iCloud 帳號</strong>（透過 Apple 提供的 CloudKit 服務，用於跨裝置同步）</li>
+      </ul>
+      <p>本 App 開發者無權限、也無能力存取你的 iCloud 資料。CloudKit 資料的存取權僅屬於你自己。</p>
+    </div>
 
-  <section>
-    <h2>5. 訂閱與付款</h2>
-    <p>
-      若你使用本 App 的付費訂閱功能，付款、扣款、訂閱管理、退款申請等流程皆由 Apple App Store 處理。
-    </p>
-    <p>
-      開發者不會直接接觸、保存或處理你的信用卡資訊、付款帳號資訊或 Apple ID 帳務資料。
-    </p>
-    <p>
-      有關 Apple 如何處理付款與相關資料，請參考 Apple 的隱私權政策。
-    </p>
-  </section>
+    <div class="card">
+      <h2>App 權限說明</h2>
+      <ul>
+        <li><strong>相機</strong>：用於拍攝商品照片，照片僅儲存在你的裝置與 iCloud 中。</li>
+        <li><strong>相簿</strong>：用於選擇既有照片或將組合圖片存回相簿，皆由你主動操作。</li>
+      </ul>
+    </div>
 
-  <section>
-    <h2>6. 兒童隱私</h2>
-    <p>
-      本 App 並非以蒐集兒童個人資料為目的，且開發者不會主動蒐集任何使用者的個人資料。
-      若法定代理人認為兒童於使用過程中有任何隱私疑慮，請透過上述聯絡方式與我們聯繫。
-    </p>
-  </section>
+    <div class="card">
+      <h2>訂閱與付款</h2>
+      <p>本 App 提供 Pro 版訂閱（月訂閱與年訂閱），所有付款流程由 Apple App Store 處理。本 App 僅透過 Apple StoreKit 接收訂閱狀態結果，<strong>不會經手任何信用卡或付款資料</strong>。付款相關資料的處理請參閱 <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 隱私權政策</a>。</p>
+      <p>新用戶可享月訂閱 1 個月免費試用。試用期結束前可隨時於 設定 → Apple ID → 訂閱項目 取消，避免被收費。</p>
+    </div>
 
-  <section>
-    <h2>7. 資料刪除方式</h2>
-    <p>
-      你可以隨時停止使用本 App，並刪除 App 以移除儲存在本機裝置中的資料。
-    </p>
-    <p>
-      若你曾啟用 iCloud 同步，已同步至 iCloud 的資料可能仍保留於你的個人 iCloud 儲存空間中。你可前往 Apple 裝置的 iCloud 儲存空間管理頁面，手動刪除與本 App 相關的資料。
-    </p>
-  </section>
+    <div class="card">
+      <h2>兒童隱私</h2>
+      <p>本 App 不針對未滿 13 歲兒童設計，也不會主動收集任何兒童資料。如有相關疑慮請與我們聯絡。</p>
+    </div>
 
-  <section>
-    <h2>8. 第三方服務</h2>
-    <p>
-      本 App 可能使用 Apple 提供的系統服務與平台功能，例如 App Store 付款機制、iCloud / CloudKit 同步等。
-      這些服務由 Apple 依其條款與隱私政策提供。
-    </p>
-  </section>
+    <div class="card">
+      <h2>資料刪除</h2>
+      <p>由於我們不擁有你的任何資料，你可以隨時自行刪除：</p>
+      <ul>
+        <li>刪除 App 即可移除所有本機資料</li>
+        <li>於 設定 → Apple ID → iCloud → 管理帳號儲存空間 中可刪除 iCloud 中的本 App 資料</li>
+      </ul>
+    </div>
 
-  <section>
-    <h2>9. 隱私權政策變更</h2>
-    <p>
-      本隱私權政策可能因 App 功能調整或法令要求而更新。若有重大變更，將於本頁面更新最新版本內容。
-    </p>
-  </section>
+    <div class="card">
+      <h2>政策變更</h2>
+      <p>若本政策有重大變更，將在本頁面更新「最後更新日期」並於 App 內公告。</p>
+    </div>
 
-  <section>
-    <h2>10. 聯絡我們</h2>
-    <p>
-      若你對本隱私權政策或本 App 的資料處理方式有任何問題，請聯絡：<br />
-      <a href="mailto:phoebewulala@gmail.com">phoebewulala@gmail.com</a>
-    </p>
-  </section>
+    <div class="card">
+      <h2>聯絡我們</h2>
+      <p>對本隱私政策有任何疑問，歡迎來信：</p>
+      <p><a href="mailto:yohaha1202@me.com">yohaha1202@me.com</a></p>
+    </div>
+  </div>
 
-  <section>
-    <h2>11. 生效日期</h2>
-    <p>本政策自 2026 年 4 月 8 日起生效。</p>
-  </section>
+  <footer>
+    <p>&copy; 2026 又又買了 YoYoAgain</p>
+  </footer>
 </body>
 </html>
