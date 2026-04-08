@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>又又買了 — 技術支援</title>
+<style>
+  :root {
+    --page-bg: #fdf8f0;
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-border: rgba(216, 200, 176, 0.5);
+    --title: #7a6652;
+    --primary: #5e4a36;
+    --secondary: #b5a48e;
+    --section: #a08060;
+    --accent: #c4782a;
+    --divider: #d8c8b0;
+    --shadow: rgba(122, 102, 82, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page-bg: #0a0a0a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --title: #e0e0e0;
+      --primary: #e0e0e0;
+      --secondary: #777777;
+      --section: #999999;
+      --accent: #e8a050;
+      --divider: #333333;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "PingFang TC", "Helvetica Neue", sans-serif;
+    background: var(--page-bg);
+    color: var(--primary);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 20px 40px;
+  }
+  .container { max-width: 680px; width: 100%; }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--title);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 8px var(--shadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--section);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+  .card p, .card li {
+    font-size: 15px;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card strong { color: var(--accent); font-weight: 600; }
+  .card ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+  .card li::marker { color: var(--secondary); }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .card a:hover { border-bottom-color: var(--accent); }
+  .card .q {
+    font-weight: 600;
+    color: var(--title);
+    margin-top: 14px;
+  }
+  .card .q:first-child { margin-top: 0; }
+  .contact-email {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0;
+  }
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--secondary);
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    body { padding: 40px 16px 32px; }
+    .card { padding: 20px 22px; border-radius: 16px; }
+    h1 { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>技術支援</h1>
+    <p class="subtitle">又又買了（YoYoAgain）— 媽媽們的美衣管理小幫手</p>
+
+    <div class="card">
+      <h2>聯絡我們</h2>
+      <p>遇到問題、有建議或想回報 bug？歡迎直接來信，我們會盡快回覆：</p>
+      <p class="contact-email"><a href="mailto:yohaha1202@me.com">yohaha1202@me.com</a></p>
+    </div>
+
+    <div class="card">
+      <h2>常見問題</h2>
+
+      <p class="q">Q. 如何匯入訂單截圖？</p>
+      <p>在「全部」頁面點右上角「+」→ 選擇「訂單匯入」→ 從相簿選擇訂單截圖（可一次選最多 10 張）→ 系統會自動辨識品名、規格、價格與數量，確認後一鍵匯入。</p>
+
+      <p class="q">Q. 支援哪種訂單截圖？</p>
+      <p>目前最佳支援 FB 社團常見的 OrderPally 訂單截圖。其他格式也可辨識但準確度會降低，辨識完成後可手動修正再匯入。</p>
+
+      <p class="q">Q. 資料會同步到雲端嗎？</p>
+      <p>會，透過 iCloud 自動同步，換手機登入同一個 Apple ID 就能看到所有商品與照片。資料僅儲存在你自己的 iCloud，開發者無法存取。</p>
+
+      <p class="q">Q. 如何備份我的資料？</p>
+      <p>除了 iCloud 自動同步之外，也可以到「設定 → 資料管理」手動匯出完整備份檔案，存到你自己的位置。</p>
+
+      <p class="q">Q. 為什麼照片沒有同步過來？</p>
+      <p>iCloud 首次同步可能需要幾分鐘到幾小時。請確認兩台裝置都登入相同 Apple ID、開啟 iCloud Drive 並連上網路。若長時間未同步，可嘗試關閉再重新開啟 App。</p>
+
+      <p class="q">Q. 照片分類「官方照 / 穿拍照 / 實品照 / 購證」是什麼意思？</p>
+      <p>四種分類方便你管理不同用途的照片：品牌提供的官方照、小孩穿上的穿拍照、商品實物拍攝的實品照，以及購買證明截圖。要販售時可以快速找到需要的照片。</p>
+    </div>
+
+    <div class="card">
+      <h2>Pro 訂閱</h2>
+
+      <p class="q">Q. Pro 訂閱有哪些功能？</p>
+      <ul>
+        <li>無限品牌與無限商品數量</li>
+        <li>無限產生分享卡片</li>
+        <li>開樓銷售活動管理</li>
+        <li>自訂販售文案模板</li>
+        <li>穿搭日曆排衣服 + 抽卡推薦今日穿搭</li>
+        <li>CSV 匯出</li>
+      </ul>
+
+      <p class="q">Q. 新用戶試用說明</p>
+      <p>首次訂閱月方案可享 1 個月免費試用。試用期結束前可隨時取消，避免被收費。</p>
+
+      <p class="q">Q. 如何取消訂閱？</p>
+      <p>到 iPhone「設定 → 你的名字 → 訂閱項目」找到「又又買了」點選取消即可。取消後在原本的到期日之前仍可繼續使用 Pro 功能。</p>
+
+      <p class="q">Q. 換手機後訂閱還在嗎？</p>
+      <p>訂閱綁定你的 Apple ID，只要在新手機登入同一個 Apple ID，打開 App 後到「設定 → Pro 訂閱」點「恢復購買」即可。</p>
+    </div>
+
+    <div class="card">
+      <h2>使用小技巧</h2>
+      <ul>
+        <li>長按商品卡片可快速拖曳排序</li>
+        <li>同一件商品可建立多個尺寸規格（例如 S / M / L），每個規格獨立管理庫存與價格</li>
+        <li>連動商品功能可把同一款不同顏色綁在一起，出售時會自動處理整組</li>
+        <li>「又想買了」清單可以規劃想買的商品，避免重複或遺漏</li>
+        <li>「開樓」功能可一次管理一場銷售活動的所有商品與文案</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>隱私權</h2>
+      <p>本 App 不收集任何個人資訊，所有資料僅保留在你的裝置與你個人的 iCloud 帳號中。詳細說明請參閱 <a href="privacy.html">隱私權政策</a>。</p>
+    </div>
+
+    <div class="card">
+      <h2>還是找不到答案？</h2>
+      <p>直接寫信告訴我們你遇到的狀況，請盡量附上：</p>
+      <ul>
+        <li>你使用的 iPhone 型號與 iOS 版本</li>
+        <li>問題發生的步驟（或操作錄影 / 截圖）</li>
+        <li>App 版本號（可在「設定 → 關於」查看）</li>
+      </ul>
+      <p style="margin-top: 10px;"><a href="mailto:yohaha1202@me.com">yohaha1202@me.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 又又買了 YoYoAgain</p>
+  </footer>
+</body>
+</html>
