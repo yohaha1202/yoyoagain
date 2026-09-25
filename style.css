@@ -223,7 +223,7 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 /* ── Screens ── */
 .screens { text-align: left; }
 .screen-row {
-  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+  display: flex; gap: 30px; overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 10px 4px 24px; margin: 0 -20px; padding-inline: 20px;
   -webkit-overflow-scrolling: touch;
 }
@@ -240,7 +240,7 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
   background: linear-gradient(#c9b39c 0 20px, transparent 20px 40px, #c9b39c 40px 84px, transparent 84px 96px, #c9b39c 96px 132px);
 }
 .screen-row figure::after { right: -5px; top: 110px; height: 58px; background: #c9b39c; }
-.screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); }
+.screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); text-align: center; }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
 .heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
 @media (min-width: 1060px) {
