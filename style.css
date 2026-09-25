@@ -228,7 +228,8 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
   -webkit-overflow-scrolling: touch;
 }
 .screen-row figure { flex: 0 0 min(240px, 66vw); margin: 0; scroll-snap-align: center; }
-.screen-row img { border-radius: 26px; box-shadow: var(--shadow); border: 6px solid var(--card); }
+/* 手機外框：奶油色邊框＋咖啡色細外圈，模仿原本介紹圖裡的手機（owner：「有手機的樣子出來比較可愛」） */
+.screen-row img { border-radius: 36px; border: 9px solid #fbf6ef; box-shadow: 0 0 0 2px #c9b39c, var(--shadow); }
 .screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
 .heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
