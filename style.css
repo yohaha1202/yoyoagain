@@ -219,7 +219,7 @@ section[id] { scroll-margin-top: 76px; }
 .feature.yellow:hover { border-color: var(--yellow); }
 
 /* ── Screens ── */
-.screens { text-align: center; }
+.screens { text-align: left; }
 .screen-row {
   display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 10px 4px 24px; margin: 0 -20px; padding-inline: 20px;
@@ -231,7 +231,7 @@ section[id] { scroll-margin-top: 76px; }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
 .heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
 @media (min-width: 1060px) {
-  .screen-row { justify-content: center; overflow: visible; }
+  .screen-row { justify-content: flex-start; overflow: visible; margin: 0; padding-inline: 0; }
   .screen-row figure { flex-basis: 240px; }
 }
 
