@@ -338,8 +338,12 @@ footer {
 .footer-brand img { border-radius: 9px; }
 .footer-brand strong { color: var(--brown-deep); }
 .footer-brand p { margin: 0; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 10px 18px; }
-.footer-links a { color: var(--muted); }
+.footer-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 520px; }
+.footer-group { display: flex; flex-direction: column; gap: 8px; }
+.footer-group a { color: var(--muted); text-decoration: none; }
+.footer-group a:hover { color: var(--brown); text-decoration: underline; }
+.footer-title { margin: 0 0 2px; font-weight: 800; color: var(--brown-deep); font-size: .9rem; }
+
 
 
 @media (prefers-reduced-motion: reduce) {
