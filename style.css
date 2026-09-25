@@ -274,7 +274,8 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 
 /* ── FAQ ── */
 .faq { text-align: left; }
-.faq-girl { width: 200px; margin: -8px 0 -6px; }
+.faq-girl { width: 200px; margin: -8px 0 10px; background: #fbf6f0; border-radius: 22px; padding: 10px 12px 0; }
+/* 這張原圖去背不乾淨（白色處是透明），墊奶油色底，深色模式才不會透出黑色破洞 */
 .faq-list { display: grid; gap: 12px; }
 .faq details {
   background: var(--card); border-radius: 18px; padding: 4px 20px;
@@ -358,7 +359,8 @@ footer {
 .footer-brand img { border-radius: 9px; }
 .footer-brand strong { color: var(--brown-deep); }
 .footer-brand p { margin: 0; }
-.footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 640px; }
+.footer-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; max-width: 760px; }
+.footer-group a { font-size: .88rem; }
 .footer-group { display: flex; flex-direction: column; gap: 8px; }
 .footer-group a { color: var(--muted); text-decoration: none; }
 .footer-group a:hover { color: var(--brown); text-decoration: underline; }
