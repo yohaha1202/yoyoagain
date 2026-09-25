@@ -55,6 +55,13 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1.2
   background: linear-gradient(transparent 62%, var(--pink) 62%);
   padding: 0 .1em;
 }
+.nobr, .keep { white-space: nowrap; }
+/* 內文裡的「又又買了」一律加粗＋螢光筆（owner 2026-09-25：「只要是 又又買了 都給一個 highlight」）。
+   頁首 logo、頁尾品牌名不套，那兩個本身就是品牌字。 */
+main .nobr {
+  font-weight: 800; color: var(--brown-deep);
+  background: linear-gradient(transparent 60%, var(--pink) 60%); padding: 0 .1em;
+}
 .pc { display: none; }
 @media (min-width: 720px) { .pc { display: inline; } }
 
@@ -204,6 +211,7 @@ section[id] { scroll-margin-top: 76px; }
 .screen-row img { border-radius: 26px; box-shadow: var(--shadow); border: 6px solid var(--card); }
 .screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
+.heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
 @media (min-width: 1060px) {
   .screen-row { justify-content: center; overflow: visible; }
   .screen-row figure { flex-basis: 240px; }
