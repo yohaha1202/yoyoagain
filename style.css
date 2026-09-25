@@ -175,6 +175,15 @@ section[id] { scroll-margin-top: 76px; }
   background: var(--bg); border-radius: 14px; padding: 8px 14px 8px 8px; font-weight: 600;
 }
 .pain-list img { width: 44px; height: 44px; object-fit: contain; border-radius: 12px; background: #fbf6f0; flex: 0 0 44px; }
+/* 可以點的煩惱：整列都是連結，右邊一個箭頭（連到對應的主題頁） */
+.pain-list li:has(.pain-link) { padding: 0; }
+.pain-link {
+  display: flex; gap: 12px; align-items: center; width: 100%;
+  padding: 8px 14px 8px 8px; color: inherit; text-decoration: none; border-radius: 14px;
+}
+.pain-link:hover { background: var(--bg-deep); }
+.pain-link > span:first-of-type { flex: 1; }
+.pain-go { color: var(--pink-deep); font-size: 1.5rem; font-weight: 800; line-height: 1; }
 .pain-answer { font-size: 1.2rem; font-weight: 800; color: var(--pink-deep); margin: 0; }
 @media (min-width: 820px) {
   .pain { grid-template-columns: 1fr 1.3fr; padding: 48px; }
