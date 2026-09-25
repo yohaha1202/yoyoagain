@@ -62,6 +62,8 @@ main .nobr {
   font-weight: 800; color: var(--brown-deep);
   background: linear-gradient(transparent 60%, var(--pink) 60%); padding: 0 .1em;
 }
+/* 這兩處不加（owner 2026-09-25）：「交給又又買了就對了！」和小標籤「又又買了可以幫你」 */
+main .pain-answer .nobr, main .section-label .nobr { font-weight: inherit; color: inherit; background: none; padding: 0; }
 .pc { display: none; }
 @media (min-width: 720px) { .pc { display: inline; } }
 
