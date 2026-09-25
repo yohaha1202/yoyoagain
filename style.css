@@ -105,6 +105,18 @@ main h1 .nobr, main h2 .nobr, main .hero-title .nobr, main .pain-answer .nobr, m
   .header-cta { display: inline-block; margin-left: 8px; }
 }
 section[id] { scroll-margin-top: 76px; }
+/* 手機：導覽放到第二行，做成跟 App 一樣的圓角小頁籤，平均分寬
+   （owner 2026-09-25：「右上文案有點醜」—— 原本灰字擠在右上角、「方案」還被切掉） */
+@media (max-width: 759px) {
+  .site-header { flex-wrap: wrap; row-gap: 8px; padding: 8px 16px 10px; }
+  .site-header nav { width: 100%; margin-left: 0; gap: 8px; }
+  .site-header nav a {
+    flex: 1; text-align: center; padding: 6px 0; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line);
+    color: var(--brown); font-size: .88rem; font-weight: 700;
+  }
+  section[id] { scroll-margin-top: 118px; }
+}
 
 /* ── Store button ── */
 .store-button {
