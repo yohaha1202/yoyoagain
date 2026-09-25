@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yohaha1202.github.io/yoyoagain/sitemap.xml
