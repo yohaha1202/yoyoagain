@@ -396,3 +396,20 @@ footer {
   .download-card { background: var(--card); }
   .pain-list li { background: var(--bg); }
 }
+
+/* ── 隱私權政策／客服與支援：內容沿用原頁，只換成網站樣式 ── */
+.legal .topic-hero h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin-bottom: 10px; }
+.legal-body { display: grid; gap: 14px; padding-top: 0; max-width: 780px; }
+.legal-card {
+  background: var(--card); border-radius: var(--radius); padding: 22px 24px;
+  box-shadow: var(--shadow); border: 1.5px solid var(--line);
+}
+.legal-card h2 { font-size: 1.15rem; font-weight: 800; color: var(--brown-deep); margin: 0 0 10px; }
+.legal-card p, .legal-card li { color: var(--muted); margin: 0 0 8px; }
+.legal-card p:last-child, .legal-card li:last-child { margin-bottom: 0; }
+.legal-card ul { padding-left: 20px; margin: 4px 0 8px; }
+.legal-card li::marker { color: var(--pink-deep); }
+.legal-card strong { color: var(--brown-deep); font-weight: 800; }
+.legal-card a { color: var(--pink-deep); font-weight: 700; }
+.legal-card .q { font-weight: 800; color: var(--brown-deep); margin-top: 16px; }
+.legal-card .contact-email { font-size: 1.1rem; text-align: center; padding: 6px 0; }
