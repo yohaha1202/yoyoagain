@@ -66,9 +66,12 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1.2
 .site-header nav { display: none; gap: 22px; margin-left: auto; }
 .site-header nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
 .site-header nav a:hover { color: var(--brown); }
+/* 手機上不放頁首的「免費下載」：iPhone Safari 最上面已經有 App 橫幅，首屏下面又有 App Store 按鈕，
+   三個下載入口疊在一起太多（owner 2026-09-25：「上面有 馬上又有 感覺很多」） */
+.header-cta { display: none; }
 @media (min-width: 760px) {
   .site-header nav { display: flex; }
-  .header-cta { margin-left: 8px; }
+  .header-cta { display: inline-block; margin-left: 8px; }
 }
 section[id] { scroll-margin-top: 76px; }
 
