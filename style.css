@@ -183,6 +183,7 @@ section[id] { scroll-margin-top: 76px; }
 }
 .pain-link:hover { background: var(--bg-deep); }
 .pain-link > span:first-of-type { flex: 1; }
+.pain-link .keep { white-space: normal; display: inline-block; }
 .pain-go { color: var(--pink-deep); font-size: 1.5rem; font-weight: 800; line-height: 1; }
 .pain-answer { font-size: 1.2rem; font-weight: 800; color: var(--pink-deep); margin: 0; }
 @media (min-width: 820px) {
