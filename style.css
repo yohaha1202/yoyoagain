@@ -63,7 +63,7 @@ main .nobr {
   background: linear-gradient(transparent 60%, var(--pink) 60%); padding: 0 .1em;
 }
 /* 這兩處不加（owner 2026-09-25）：「交給又又買了就對了！」和小標籤「又又買了可以幫你」 */
-main .pain-answer .nobr, main .section-label .nobr { font-weight: inherit; color: inherit; background: none; padding: 0; }
+main .pain-answer .nobr, main .section-label .nobr, main .crumbs .nobr, main .back-home .nobr { font-weight: inherit; color: inherit; background: none; padding: 0; }
 .pc { display: none; }
 @media (min-width: 720px) { .pc { display: inline; } }
 
@@ -129,6 +129,12 @@ section[id] { scroll-margin-top: 76px; }
 .hero h1 { font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 900; }
 .lead { font-size: 1.25rem; font-weight: 700; color: var(--brown); margin: 14px 0 6px; }
 .hero-text { color: var(--muted); font-size: 1.05rem; margin: 0 0 26px; }
+.topic-pill {
+  display: inline-block; margin: 0 0 22px; padding: 7px 16px; border-radius: 999px;
+  background: var(--card); border: 1.5px solid var(--line); color: var(--brown-deep);
+  font-weight: 700; font-size: .95rem; text-decoration: none;
+}
+.topic-pill:hover { border-color: var(--pink-deep); }
 .tiny-note { font-size: .85rem; color: var(--muted); margin-top: 16px; }
 /* 手機：首屏不放 App Store 按鈕，下載入口放在頁面最下面（owner 2026-09-25：「直接擺在最上面有點醜」）。
    電腦版首屏左邊空間夠，按鈕留著。 */
