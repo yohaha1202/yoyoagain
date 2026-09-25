@@ -274,8 +274,7 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 
 /* ── FAQ ── */
 .faq { text-align: left; }
-.faq-girl { width: 200px; margin: -8px 0 10px; background: #fbf6f0; border-radius: 22px; padding: 10px 12px 0; }
-/* 這張原圖去背不乾淨（白色處是透明），墊奶油色底，深色模式才不會透出黑色破洞 */
+.faq-girl { width: 200px; margin: -8px 0 -6px; }
 .faq-list { display: grid; gap: 12px; }
 .faq details {
   background: var(--card); border-radius: 18px; padding: 4px 20px;
