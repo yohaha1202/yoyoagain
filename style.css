@@ -82,8 +82,11 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1.2
   margin-left: auto; text-decoration: none; color: #fff; background: var(--brown);
   padding: 7px 16px; border-radius: 999px; font-weight: 700; font-size: .92rem; white-space: nowrap;
 }
-.site-header nav { display: none; gap: 22px; margin-left: auto; }
-.site-header nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+/* 手機也顯示 功能／畫面／常見問題（owner 2026-09-25：「這個怎麼不見了」），字小一點放得下；
+   「免費下載」在手機上仍不顯示（下載入口太多）。 */
+.site-header nav { display: flex; gap: 14px; margin-left: auto; }
+.site-header nav a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: .9rem; }
+@media (min-width: 760px) { .site-header nav { gap: 22px; } .site-header nav a { font-size: 1rem; } }
 .site-header nav a:hover { color: var(--brown); }
 /* 手機上不放頁首的「免費下載」：iPhone Safari 最上面已經有 App 橫幅，首屏下面又有 App Store 按鈕，
    三個下載入口疊在一起太多（owner 2026-09-25：「上面有 馬上又有 感覺很多」） */
@@ -137,7 +140,7 @@ section[id] { scroll-margin-top: 76px; }
 .sticker-2 { right: -6px; bottom: 6%; transform: rotate(4deg); background: #f4f8fc; }
 
 @media (min-width: 900px) {
-  .hero { grid-template-columns: 1.1fr 1fr; padding-top: 64px; padding-bottom: 56px; }
+  .hero { padding-top: 64px; padding-bottom: 40px; }
   .hero-art { width: 400px; height: 700px; }
   .sticker-1 { left: -50px; }
   .sticker-2 { right: -40px; }
@@ -277,6 +280,23 @@ section[id] { scroll-margin-top: 76px; }
   background: var(--card); border: 1.5px solid var(--line); border-radius: 999px; padding: 4px 12px;
 }
 .threads-link svg { width: 16px; height: 16px; }
+
+/* ── 主題介紹頁 ── */
+.crumbs { font-size: .85rem; color: var(--muted); margin-bottom: 18px; }
+.crumbs a { color: var(--muted); }
+.topic-hero h1 { font-size: clamp(2.1rem, 7vw, 3.4rem); font-weight: 900; margin-bottom: 18px; }
+.lead-text { color: var(--muted); font-size: 1.05rem; max-width: 720px; margin: 0 0 12px; }
+.topic-points { display: grid; gap: 14px; padding-top: 8px; }
+@media (min-width: 820px) { .topic-points { grid-template-columns: repeat(2, 1fr); } }
+.point {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow);
+}
+.point img { flex: 0 0 72px; width: 72px; border-radius: 16px; background: #fbf6f0; }
+.point h2 { font-size: 1.15rem; font-weight: 800; margin: 2px 0 6px; }
+.point p { margin: 0; color: var(--muted); font-size: .96rem; }
+.topic-shot img { width: min(300px, 76vw); margin: 0 auto; border-radius: 26px; box-shadow: var(--shadow); border: 6px solid var(--card); }
+.back-home { margin: 22px 0 0 !important; font-size: .92rem; }
 
 /* ── Footer ── */
 footer {
