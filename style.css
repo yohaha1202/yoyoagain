@@ -230,6 +230,16 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .screen-row figure { flex: 0 0 min(240px, 66vw); margin: 0; scroll-snap-align: center; }
 /* 手機外框：奶油色邊框＋咖啡色細外圈，模仿原本介紹圖裡的手機（owner：「有手機的樣子出來比較可愛」） */
 .screen-row img { border-radius: 36px; border: 9px solid #fbf6ef; box-shadow: 0 0 0 2px #c9b39c, var(--shadow); }
+/* 側邊按鍵：左邊靜音＋音量兩顆、右邊電源（owner：「原圖左右有按鍵你都沒有了」） */
+.screen-row figure { position: relative; }
+.screen-row figure::before, .screen-row figure::after {
+  content: ""; position: absolute; width: 4px; border-radius: 3px;
+}
+.screen-row figure::before {
+  left: -5px; top: 78px; height: 132px;
+  background: linear-gradient(#c9b39c 0 20px, transparent 20px 40px, #c9b39c 40px 84px, transparent 84px 96px, #c9b39c 96px 132px);
+}
+.screen-row figure::after { right: -5px; top: 110px; height: 58px; background: #c9b39c; }
 .screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
 .heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
