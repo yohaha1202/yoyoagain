@@ -343,6 +343,7 @@ section[id] { scroll-margin-top: 76px; }
 .compare tbody th { text-align: left; font-weight: 600; color: var(--text); }
 .compare thead th { font-weight: 800; color: var(--brown-deep); }
 .compare .pro { color: var(--pink-deep); font-weight: 800; }
+.compare tr.group th { background: var(--bg); color: var(--brown-deep); font-weight: 800; font-size: .85rem; text-align: left; padding: 8px 14px; }
 .compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
 
 /* ── Footer ── */
