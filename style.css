@@ -243,6 +243,8 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .screen-row figcaption { margin-top: 12px; font-weight: 700; color: var(--brown-deep); text-align: center; }
 .screens-note { font-size: .8rem; color: var(--muted); margin: 4px 0 0; }
 .heart { color: var(--pink-deep); font-weight: 700; font-size: 1.05em; }
+/* 行尾有愛心時，行首放一顆看不見的，整行才會真的置中（owner：「下面很不置中耶？是因為愛心嗎」） */
+.heart-ghost { visibility: hidden; }
 @media (min-width: 1060px) {
   .screen-row { justify-content: flex-start; overflow: visible; margin: 0; padding-inline: 0; }
   .screen-row figure { flex-basis: 240px; }
