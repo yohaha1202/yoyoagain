@@ -68,7 +68,7 @@ main h1 .nobr, main h2 .nobr, main .hero-title .nobr, main .pain-answer .nobr, m
 @media (min-width: 720px) { .pc { display: inline; } }
 
 .section { padding: 28px 20px; max-width: 1120px; margin: 0 auto; }
-@media (min-width: 760px) { .section { padding: 48px 20px; } }
+@media (min-width: 760px) { .section { padding: 32px 20px; } }
 .section-label {
   display: inline-block;
   font-size: .85rem; font-weight: 700; color: var(--brown);
@@ -168,8 +168,8 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
   background: var(--card); border-radius: 32px; box-shadow: var(--shadow);
   margin: 28px 20px; padding: 40px 24px;
 }
-@media (min-width: 760px) { .pain { margin: 48px 20px; } }
-@media (min-width: 1160px) { .pain { margin: 48px auto; } }
+@media (min-width: 760px) { .pain { margin: 32px 20px; } }
+@media (min-width: 1160px) { .pain { margin: 32px auto; } }
 .pain-girl img { width: min(320px, 80%); margin: 0 auto; }
 .pain-list { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
 .pain-list li {
@@ -358,7 +358,7 @@ footer {
 .footer-brand img { border-radius: 9px; }
 .footer-brand strong { color: var(--brown-deep); }
 .footer-brand p { margin: 0; }
-.footer-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 520px; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 640px; }
 .footer-group { display: flex; flex-direction: column; gap: 8px; }
 .footer-group a { color: var(--muted); text-decoration: none; }
 .footer-group a:hover { color: var(--brown); text-decoration: underline; }
