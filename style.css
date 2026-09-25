@@ -274,7 +274,7 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 
 /* ── FAQ ── */
 .faq { text-align: left; }
-.faq-girl { width: 200px; margin: -8px 0 -6px; }
+.faq-girl { width: 220px; margin: -8px 0 4px; }
 .faq-list { display: grid; gap: 12px; }
 .faq details {
   background: var(--card); border-radius: 18px; padding: 4px 20px;
