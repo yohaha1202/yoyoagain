@@ -166,9 +166,10 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .pain {
   display: grid; gap: 24px; align-items: center;
   background: var(--card); border-radius: 32px; box-shadow: var(--shadow);
-  margin: 0 20px; padding: 40px 24px;
+  margin: 28px 20px; padding: 40px 24px;
 }
-@media (min-width: 1160px) { .pain { margin: 0 auto; } }
+@media (min-width: 760px) { .pain { margin: 72px 20px; } }
+@media (min-width: 1160px) { .pain { margin: 72px auto; } }
 .pain-girl img { width: min(320px, 80%); margin: 0 auto; }
 .pain-list { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
 .pain-list li {
