@@ -63,7 +63,7 @@ main .nobr {
   background: linear-gradient(transparent 60%, var(--pink) 60%); padding: 0 .1em;
 }
 /* 這兩處不加（owner 2026-09-25）：「交給又又買了就對了！」和小標籤「又又買了可以幫你」 */
-main h1 .nobr, main h2 .nobr, main .pain-answer .nobr, main .section-label .nobr, main .crumbs .nobr, main .back-home .nobr { font-weight: inherit; color: inherit; background: none; padding: 0; }
+main h1 .nobr, main h2 .nobr, main .hero-title .nobr, main .pain-answer .nobr, main .section-label .nobr, main .crumbs .nobr, main .back-home .nobr { font-weight: inherit; color: inherit; background: none; padding: 0; }
 .pc { display: none; }
 @media (min-width: 720px) { .pc { display: inline; } }
 
@@ -126,7 +126,8 @@ section[id] { scroll-margin-top: 76px; }
   display: grid; gap: 36px; align-items: center;
 }
 .eyebrow { color: var(--brown); font-weight: 700; margin: 0 0 10px; }
-.hero h1 { font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 900; }
+.hero-title { font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 900; color: var(--brown-deep); line-height: 1.3; margin: 0; letter-spacing: .02em; }
+h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spacing: 0; }
 .lead { font-size: 1.25rem; font-weight: 700; color: var(--brown); margin: 14px 0 6px; }
 .hero-text { color: var(--muted); font-size: 1.05rem; margin: 0 0 26px; }
 .topic-pill {
