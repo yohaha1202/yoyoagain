@@ -297,9 +297,9 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
   position: relative; text-align: center;
   background: var(--card);
   border-radius: 36px; box-shadow: var(--shadow);
-  padding: 140px 24px 40px; margin-top: 90px;
+  padding: 118px 24px 32px; margin-top: 78px;
 }
-.download-girl { position: absolute; top: -110px; left: 50%; transform: translateX(-50%); width: min(340px, 82%); }
+.download-girl { position: absolute; top: -96px; left: 50%; transform: translateX(-50%); width: min(300px, 78%); }
 .download-card p { color: var(--muted); margin: 0 0 22px; }
 
 .social-line { margin: 26px 0 0 !important; font-size: .95rem; }
