@@ -67,7 +67,7 @@ main .pain-answer .nobr, main .section-label .nobr { font-weight: inherit; color
 .pc { display: none; }
 @media (min-width: 720px) { .pc { display: inline; } }
 
-.section { padding: 44px 20px; max-width: 1120px; margin: 0 auto; }
+.section { padding: 28px 20px; max-width: 1120px; margin: 0 auto; }
 @media (min-width: 760px) { .section { padding: 72px 20px; } }
 .section-label {
   display: inline-block;
@@ -255,7 +255,7 @@ section[id] { scroll-margin-top: 76px; }
 
 /* ── FAQ ── */
 .faq { text-align: left; }
-.faq-girl { width: 220px; margin: 0 0 -6px; }
+.faq-girl { width: 200px; margin: -8px 0 -6px; }
 .faq-list { display: grid; gap: 12px; }
 .faq details {
   background: var(--card); border-radius: 18px; padding: 4px 20px;
