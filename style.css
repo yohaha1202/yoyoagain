@@ -352,6 +352,8 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .plan-price small { font-size: .95rem; font-weight: 700; color: var(--muted); margin-left: 2px; }
 .plan-note { margin: 0; color: var(--muted); font-size: .92rem; }
 .table-wrap { overflow-x: auto; background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
+/* 接在頁首下面，間距跟主題頁的重點卡片一樣（owner 2026-09-26：「這邊跟其他的間距一樣嗎」） */
+.compare { padding-top: 8px; }
 .compare table { width: 100%; border-collapse: collapse; font-size: .95rem; }
 .compare th, .compare td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: center; }
 .compare tbody th { text-align: left; font-weight: 600; color: var(--text); }
