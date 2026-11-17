@@ -417,3 +417,29 @@ footer {
 .legal-card a { color: var(--pink-deep); font-weight: 700; }
 .legal-card .q { font-weight: 800; color: var(--brown-deep); margin-top: 16px; }
 .legal-card .contact-email { font-size: 1.1rem; text-align: center; padding: 6px 0; }
+
+/* ── 2026-11：主題頁的小段落標題、組圖風格小圖、同頁跳轉、電腦版實際畫面換行 ── */
+.topic-sub { padding-bottom: 0; }
+.topic-sub h2 { margin-bottom: .4rem; }
+.topic-shot { text-align: center; }
+.style-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; padding-top: 8px; }
+@media (min-width: 820px) { .style-gallery { grid-template-columns: repeat(4, 1fr); } }
+.style-gallery figure { margin: 0; }
+.style-gallery img { width: 100%; border-radius: 16px; border: 4px solid var(--card); box-shadow: var(--shadow); }
+.style-gallery figcaption { margin-top: 8px; font-weight: 700; color: var(--brown-deep); text-align: center; font-size: .95rem; }
+.legal-card[id], .point[id] { scroll-margin-top: 76px; }
+@media (min-width: 1060px) { .screen-row { flex-wrap: wrap; row-gap: 34px; } }
+/* 頁尾第一欄項目變多、名字較長（寶貝成長紀錄），給它寬一點才不會折行 */
+.footer-cols { grid-template-columns: minmax(0, 1.35fr) repeat(3, minmax(0, 1fr)); }
+/* 功能卡最後一列沒排滿時置中：張數是 14、15、16 都不會有卡片孤零零靠左 */
+@media (min-width: 620px) and (max-width: 979px) {
+  .feature-grid { grid-template-columns: repeat(4, 1fr); }
+  .feature { grid-column: span 2; }
+  .feature:last-child:nth-child(odd) { grid-column: 2 / span 2; }
+}
+@media (min-width: 980px) {
+  .feature-grid { grid-template-columns: repeat(6, 1fr); }
+  .feature { grid-column: span 2; }
+  .feature:nth-last-child(2):nth-child(3n+1) { grid-column: 2 / span 2; }
+  .feature:last-child:nth-child(3n+1) { grid-column: 3 / span 2; }
+}
