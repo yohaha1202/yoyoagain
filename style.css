@@ -443,3 +443,30 @@ footer {
   .feature:nth-last-child(2):nth-child(3n+1) { grid-column: 2 / span 2; }
   .feature:last-child:nth-child(3n+1) { grid-column: 3 / span 2; }
 }
+
+/* ── 2026-11：首頁影片區塊。直式影片並排置中，手機上一支一列；幾支都會自己排 ── */
+.video-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 32px; margin-top: 8px; }
+.video-card { flex: 0 1 300px; margin: 0; }
+/* 外框用陰影畫：影片本身才會剛好是 9:16 */
+.video-frame { position: relative; overflow: hidden; border-radius: 24px; background: #f8f1e7; box-shadow: 0 0 0 6px var(--card), var(--shadow); }
+.video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; }
+/* 自己做的播放鈕：整張封面都能點，中間一顆咖啡色圓鈕（owner 2026-11-17：沒播之前封面要完整露出，不要原生播放列） */
+.video-play {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.video-play[hidden] { display: none; }
+.video-play-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(90, 67, 53, .92);
+  box-shadow: 0 0 0 4px rgba(255, 253, 249, .92), 0 10px 24px rgba(60, 40, 28, .35);
+  transition: transform .12s;
+}
+.video-play-icon svg { width: 34px; height: 34px; margin-left: 3px; fill: #fffdf9; }
+.video-play:hover .video-play-icon { transform: scale(1.06); }
+.video-play:focus-visible { outline: none; }
+.video-play:focus-visible .video-play-icon { box-shadow: 0 0 0 4px #fffdf9, 0 0 0 8px var(--pink-deep); }
+.video-card figcaption { padding: 10px 4px 0; text-align: center; }
+@media (max-width: 619px) { .video-card { flex-basis: min(300px, 100%); } }

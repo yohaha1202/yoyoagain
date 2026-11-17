@@ -26,7 +26,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=19">
+  <link rel="stylesheet" href="style.css?v=20">
 
   <script type="application/ld+json">
   {
@@ -175,6 +175,41 @@
         <li><a class="pain-link" href="kids-clothes-budget.html"><img src="assets/img/feature-icons-v2/stats.jpg" alt="" width="256" height="256"><span>這個月花了多少<br>到底該怎麼算</span><span class="pain-go" aria-label="看童裝記帳怎麼做">›</span></a></li>
       </ul>
       <p class="pain-answer">交給<span class="nobr">又又買了</span>就對了！</p>
+    </div>
+  </section>
+
+  <!-- ───────── 影片 ─────────
+       要加一支影片：把下面任一個 video-card 那一整塊（figure 開頭到 figure 結尾）複製一份，改 3 個地方——
+       ① poster 和 source 的檔名（檔案放 assets/video/，直式 720×1280 的 mp4，加一張同名 -poster.jpg）
+       ② 播放鈕和 video 的 aria-label（給看不到畫面的人聽的名字） ③ 連結要去的頁和文字。幾支都會自己排好。
+       影片下面只放導頁連結，不放標題和說明（owner 2026-11-17）。
+       播放鈕：沒播之前只看得到封面和一顆大播放鈕，按了才開始播、才出現播放列（頁面最下面那段小程式在管）。 -->
+  <section class="videos section" id="videos">
+    <p class="section-label">影片</p>
+    <h2>美衣坑的每一步<br><span class="hl">都有我幫你</span></h2>
+    <div class="video-row">
+      <figure class="video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="assets/video/import-poster.jpg" width="720" height="1280" aria-label="影片：喊單之後把截圖丟進又又買了，自動辨識名稱、價格、尺寸，官方照和購證自動存好">
+            <source src="assets/video/import.mp4" type="video/mp4">
+          </video>
+          <button class="video-play" type="button" hidden aria-label="播放影片：截圖匯入"><span class="video-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.86l10.4-6.4a1 1 0 0 0 0-1.72L9.52 4.74A1 1 0 0 0 8 5.6z"/></svg></span></button>
+        </div>
+        <figcaption>
+          <a class="more-link" href="screenshot-import.html">看截圖匯入 →</a>
+        </figcaption>
+      </figure>
+      <figure class="video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="assets/video/calendar-poster.jpg" width="720" height="1280" aria-label="影片：把衣服排進穿搭行事曆，每天穿什麼一眼就知道，排好的穿搭一鍵分享">
+            <source src="assets/video/calendar.mp4" type="video/mp4">
+          </video>
+          <button class="video-play" type="button" hidden aria-label="播放影片：穿搭行事曆"><span class="video-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.86l10.4-6.4a1 1 0 0 0 0-1.72L9.52 4.74A1 1 0 0 0 8 5.6z"/></svg></span></button>
+        </div>
+        <figcaption>
+          <a class="more-link" href="outfit-planner.html">看穿搭行事曆 →</a>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -384,5 +419,26 @@
   <small>© 2026 <span class="nobr">又又買了</span> YoYoAgain</small>
 </footer>
 
+<script>
+  // 影片：沒播之前只顯示封面和自己做的播放鈕；按了才開始播、才出現播放列；播完回到封面
+  (function () {
+    document.querySelectorAll('.video-frame').forEach(function (frame) {
+      var v = frame.querySelector('video'), btn = frame.querySelector('.video-play');
+      if (!v || !btn) return;
+      function cover() { v.controls = false; btn.hidden = false; }
+      cover();
+      btn.addEventListener('click', function () {
+        btn.hidden = true; v.controls = true;
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      });
+      v.addEventListener('ended', function () { v.load(); cover(); });
+    });
+    // 同時只播一支：按了這支，其他的先暫停（都有配樂，一起播會打架）
+    document.addEventListener('play', function (e) {
+      if (e.target.tagName !== 'VIDEO') return;
+      document.querySelectorAll('video').forEach(function (o) { if (o !== e.target) o.pause(); });
+    }, true);
+  })();
+</script>
 </body>
 </html>
