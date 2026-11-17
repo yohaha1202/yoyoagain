@@ -38,7 +38,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* 不用捲動動畫：點卡片換頁時直接落在該段，不會先停在頂端再被拉下去（owner 2026-11-17） */
 body {
   margin: 0;
   font-family: var(--font);
