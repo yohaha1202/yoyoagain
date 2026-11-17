@@ -470,3 +470,34 @@ footer {
 .video-play:focus-visible .video-play-icon { box-shadow: 0 0 0 4px #fffdf9, 0 0 0 8px var(--pink-deep); }
 .video-card figcaption { padding: 10px 4px 0; text-align: center; }
 @media (max-width: 619px) { .video-card { flex-basis: min(300px, 100%); } }
+
+/* ── 2026-11：首頁功能卡手機版＝兩欄小卡（owner 2026-11-17 方案 A）。
+   每張只有小圖＋標題＋一句短話，整張卡都能點；620px 以上（平板、電腦）完全不受影響 ── */
+.feature-short { display: none; }
+@media (max-width: 619px) {
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .feature { position: relative; padding: 14px 14px 16px; }
+  .feature:hover { transform: none; }
+  .feature-icon { width: 56px; border-radius: 14px; margin-bottom: 8px; }
+  /* 標題要換行時只在頓號、空格的地方換（keep-all），不會把「記帳」「同步」拆成兩行；真的放不下才硬換。
+     iPhone 的 Safari 在 keep-all 之下連頓號後面都不換，所以標題和短句的標點後面另外放了 <wbr> 標出換行點 */
+  .feature h3 { font-size: .92rem; line-height: 1.35; margin-bottom: 4px; word-break: keep-all; overflow-wrap: anywhere; }
+  .feature p { font-size: .84rem; line-height: 1.5; word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
+  .feature-long { display: none; }
+  .feature-short { display: inline; }
+  /* 「看更多 →」的字收起來，連結鋪滿整張卡 */
+  .feature .more-link { display: inline; margin: 0; font-size: 0; }
+  .feature .more-link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+  .feature .more-link:focus-visible::after { outline: 2px solid var(--pink-deep); outline-offset: -3px; }
+  /* 右上角一個小箭頭，看得出可以點 */
+  .feature::after { content: "›"; position: absolute; top: 12px; right: 13px; color: var(--pink-deep); font-weight: 800; font-size: 1.15rem; line-height: 1; pointer-events: none; }
+  /* 張數是單數時，最後一張置中 */
+  .feature:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); }
+}
+/* 整塊不拆行（「＋文案」） */
+.nb { white-space: nowrap; }
+/* 很窄的手機（320 寬：舊款小手機、或把顯示放大的 iPhone）：字縮一點，8 個字的短句還是一行放得下 */
+@media (max-width: 339px) {
+  .feature h3 { font-size: .86rem; }
+  .feature p { font-size: .78rem; }
+}
