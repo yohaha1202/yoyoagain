@@ -122,7 +122,13 @@ section[id] { scroll-margin-top: 76px; }
 /* ── Hero ── */
 .hero {
   max-width: 1120px; margin: 0 auto; padding: 28px 20px 28px;
-  display: grid; gap: 36px; align-items: center;
+  display: grid; gap: 4px; align-items: center;
+}
+/* 米米（歪頭想事情的小女孩）：電腦、平板在文字右邊，手機在文字下面置中（owner 2026-11-18：「右邊太空了」） */
+.hero-girl img { width: min(300px, 78%); margin: 0 auto; }
+@media (min-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; }
+  .hero-girl img { width: min(470px, 100%); }
 }
 .eyebrow { color: var(--brown); font-weight: 700; margin: 0 0 10px; }
 .hero-title { font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 900; color: var(--brown-deep); line-height: 1.3; margin: 0; letter-spacing: .02em; }
@@ -155,27 +161,29 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .sticker-2 { right: -6px; bottom: 6%; transform: rotate(4deg); background: #f4f8fc; }
 
 @media (min-width: 900px) {
-  .hero { padding-top: 64px; padding-bottom: 40px; }
+  .hero { padding-top: 64px; padding-bottom: 40px; gap: 40px; }
   .hero-art { width: 400px; height: 700px; }
   .sticker-1 { left: -50px; }
   .sticker-2 { right: -40px; }
 }
 
 /* ── Pain ── */
+/* 米米搬到 hero 之後，這塊整個置中、放大（owner 2026-11-18：「你是不是也這樣就置中放大」） */
 .pain {
-  display: grid; gap: 24px; align-items: center;
+  display: grid; justify-items: center; text-align: center;
   background: var(--card); border-radius: 32px; box-shadow: var(--shadow);
-  margin: 28px 20px; padding: 40px 24px;
+  margin: 28px 20px; padding: 40px 20px;
 }
+.pain-copy { width: 100%; max-width: 900px; }
+.pain h2 { font-size: clamp(1.9rem, 4.6vw, 2.9rem); }
 @media (min-width: 760px) { .pain { margin: 32px 20px; } }
 @media (min-width: 1160px) { .pain { margin: 32px auto; } }
-.pain-girl img { width: min(320px, 80%); margin: 0 auto; }
-.pain-list { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
+.pain-list { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 12px; text-align: left; font-size: 1.06rem; }
 .pain-list li {
   display: flex; gap: 12px; align-items: center;
   background: var(--bg); border-radius: 14px; padding: 8px 14px 8px 8px; font-weight: 600;
 }
-.pain-list img { width: 44px; height: 44px; object-fit: contain; border-radius: 12px; background: #fbf6f0; flex: 0 0 44px; }
+.pain-list img { width: 52px; height: 52px; object-fit: contain; border-radius: 12px; background: #fbf6f0; flex: 0 0 52px; }
 /* 可以點的煩惱：整列都是連結，右邊一個箭頭（連到對應的主題頁） */
 .pain-list li:has(.pain-link) { padding: 0; }
 .pain-link {
@@ -186,9 +194,20 @@ h1.eyebrow { font-size: 1rem; line-height: 1.6; color: var(--brown); letter-spac
 .pain-link > span:first-of-type { flex: 1; }
 .pain-link .keep { white-space: normal; display: inline-block; }
 .pain-go { color: var(--pink-deep); font-size: 1.5rem; font-weight: 800; line-height: 1; }
-.pain-answer { font-size: 1.2rem; font-weight: 800; color: var(--pink-deep); margin: 0; }
+.pain-answer { font-size: 1.35rem; font-weight: 800; color: var(--pink-deep); margin: 0; }
 @media (min-width: 820px) {
-  .pain { grid-template-columns: 1fr 1.3fr; padding: 48px; }
+  .pain { padding: 56px 48px; }
+  .pain-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; font-size: 1.2rem; }
+  .pain-link { gap: 16px; padding: 14px 18px 14px 14px; }
+  .pain-list img { width: 64px; height: 64px; flex-basis: 64px; border-radius: 14px; }
+  .pain-answer { font-size: 1.6rem; }
+}
+/* 很窄的手機（320 寬）：邊距、小圖、字收一點，每個煩惱還是剛好兩行 */
+@media (max-width: 359px) {
+  .pain { padding-left: 14px; padding-right: 14px; }
+  .pain-list { font-size: .96rem; }
+  .pain-list img { width: 44px; height: 44px; flex-basis: 44px; }
+  .pain-link { gap: 10px; padding-right: 10px; }
 }
 
 /* ── Features ── */
