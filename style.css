@@ -517,3 +517,18 @@ footer {
   .feature h3 { font-size: .86rem; }
   .feature p { font-size: .78rem; }
 }
+
+/* ── 2026-11：頂端選單在窄手機上不要被拆成兩行（360 寬以下，多數 Android 手機）。
+   375 寬以上本來就放得下，這裡的規則不會影響到 ── */
+.site-header nav a { white-space: nowrap; }
+@media (max-width: 374px) {
+  .site-header { gap: 10px; padding-left: 16px; padding-right: 16px; }
+  .site-header nav { gap: 10px; }
+  .site-header nav a { font-size: .84rem; }
+}
+@media (max-width: 339px) {
+  .site-header { gap: 8px; padding-left: 12px; padding-right: 12px; }
+  .brand { gap: 8px; font-size: 1rem; }
+  .site-header nav { gap: 8px; }
+  .site-header nav a { font-size: .8rem; }
+}
