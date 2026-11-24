@@ -26,7 +26,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="stylesheet" href="style.css?v=25">
 
   <script type="application/ld+json">
   {
@@ -182,12 +182,14 @@
   <!-- ───────── 影片 ─────────
        要加一支影片：把下面任一個 video-card 那一整塊（figure 開頭到 figure 結尾）複製一份，改 3 個地方——
        ① poster 和 source 的檔名（檔案放 assets/video/，直式 720×1280 的 mp4，加一張同名 -poster.jpg）
-       ② 播放鈕和 video 的 aria-label（給看不到畫面的人聽的名字） ③ 連結要去的頁和文字。幾支都會自己排好。
+       ② 播放鈕和 video 的 aria-label（給看不到畫面的人聽的名字） ③ 連結要去的頁和文字。幾支都會自己排進輪播（小圓點自動產生）。
        影片下面只放導頁連結，不放標題和說明（owner 2026-11-17）。
        播放鈕：沒播之前只看得到封面和一顆大播放鈕，按了才開始播、才出現播放列（頁面最下面那段小程式在管）。 -->
   <section class="videos section" id="videos">
     <h2>美衣坑的每一步<br><span class="hl">都有我幫你</span></h2>
-    <div class="video-row">
+    <div class="video-carousel" aria-roledescription="輪播" aria-label="功能影片">
+      <button class="video-nav prev" type="button" aria-label="上一支影片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="video-row">
       <figure class="video-card">
         <div class="video-frame">
           <video controls playsinline preload="metadata" poster="assets/video/import-poster.jpg" width="720" height="1280" aria-label="影片：喊單之後把截圖丟進又又買了，自動辨識名稱、價格、尺寸，官方照和購證自動存好">
@@ -210,19 +212,20 @@
           <a class="more-link" href="outfit-planner.html">看穿搭行事曆 →</a>
         </figcaption>
       </figure>
-      <!-- 預留：③ 穿搭日記影片定案後，把檔案放成 assets/video/diary.mp4、assets/video/diary-poster.jpg，再把這段註解的頭尾拿掉。
-      [figure class="video-card"]
-        [div class="video-frame"]
-          [video controls playsinline preload="metadata" poster="assets/video/diary-poster.jpg" width="720" height="1280" aria-label="影片：照片加幾句話寫成穿搭日記，今天的穿搭自動帶入"]
-            [source src="assets/video/diary.mp4" type="video/mp4"]
-          [/video]
-          （播放鈕那一行從上面任一支複製過來，aria-label 改成「播放影片：穿搭日記」）
-        [/div]
-        [figcaption]
-          [a class="more-link" href="outfit-diary.html"]看穿搭日記 →[/a]
-        [/figcaption]
-      [/figure]
-      （用的時候把方括號換回角括號）-->
+      <figure class="video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="assets/video/diary-poster.jpg" width="720" height="1280" aria-label="影片：照片加幾句話寫成穿搭日記，今天的穿搭自動帶入">
+            <source src="assets/video/diary.mp4" type="video/mp4">
+          </video>
+          <button class="video-play" type="button" hidden aria-label="播放影片：穿搭日記"><span class="video-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.86l10.4-6.4a1 1 0 0 0 0-1.72L9.52 4.74A1 1 0 0 0 8 5.6z"/></svg></span></button>
+        </div>
+        <figcaption>
+          <a class="more-link" href="outfit-diary.html">看穿搭日記 →</a>
+        </figcaption>
+      </figure>
+      </div>
+      <button class="video-nav next" type="button" aria-label="下一支影片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="video-dots" role="tablist" aria-label="選擇影片"></div>
     </div>
   </section>
 
@@ -455,6 +458,31 @@
         var p = v.play(); if (p && p.catch) p.catch(function () {});
       });
       v.addEventListener('ended', function () { v.load(); cover(); });
+    });
+    // 影片輪播：一次一張；箭頭、小圓點、手機左右滑；滑走時暫停正在播的那支（owner 2026-11-24）
+    document.querySelectorAll('.video-carousel').forEach(function (car) {
+      var row = car.querySelector('.video-row'), cards = [].slice.call(row.querySelectorAll('.video-card'));
+      var prev = car.querySelector('.video-nav.prev'), next = car.querySelector('.video-nav.next'), dots = car.querySelector('.video-dots');
+      if (cards.length < 2) { car.classList.add('single'); return; }
+      var cur = 0;
+      cards.forEach(function (c, i) {
+        c.setAttribute('aria-roledescription', '投影片'); c.setAttribute('aria-label', (i + 1) + ' / ' + cards.length);
+        var d = document.createElement('button'); d.type = 'button'; d.setAttribute('role', 'tab');
+        d.setAttribute('aria-label', '第 ' + (i + 1) + ' 支影片');
+        d.addEventListener('click', function () { go(i); }); dots.appendChild(d);
+      });
+      function go(i) { i = Math.max(0, Math.min(cards.length - 1, i)); row.scrollTo({ left: cards[i].offsetLeft - row.offsetLeft, behavior: 'smooth' }); }
+      function sync() {
+        var i = Math.round(row.scrollLeft / row.clientWidth);
+        if (i !== cur) { var v = cards[cur].querySelector('video'); if (v && !v.paused) v.pause(); cur = i; }
+        [].forEach.call(dots.children, function (d, k) { d.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+        prev.disabled = cur === 0; next.disabled = cur === cards.length - 1;
+      }
+      prev.addEventListener('click', function () { go(cur - 1); });
+      next.addEventListener('click', function () { go(cur + 1); });
+      row.addEventListener('scroll', function () { window.requestAnimationFrame(sync); }, { passive: true });
+      window.addEventListener('resize', function () { go(cur); });
+      sync();
     });
     // 同時只播一支：按了這支，其他的先暫停（都有配樂，一起播會打架）
     document.addEventListener('play', function (e) {

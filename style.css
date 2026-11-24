@@ -487,6 +487,37 @@ footer {
 .video-card figcaption { padding: 10px 4px 0; text-align: center; }
 @media (max-width: 619px) { .video-card { flex-basis: min(300px, 100%); } }
 
+/* ── 2026-11-24：首頁影片改成輪播（owner：影片會越來越多，一排很難看）。一次一張，手機左右滑，桌機有左右箭頭，底下小圓點 ── */
+.video-carousel { position: relative; max-width: 420px; margin: 8px auto 0; }
+.video-carousel .video-row {
+  display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 0; margin: 0;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  padding: 10px 0 4px;
+}
+.video-carousel .video-row::-webkit-scrollbar { display: none; }
+.video-carousel .video-card { flex: 0 0 100%; display: flex; flex-direction: column; align-items: center; scroll-snap-align: center; scroll-snap-stop: always; }
+.video-carousel .video-frame { width: min(300px, calc(100% - 24px)); }
+.video-nav {
+  position: absolute; top: calc(50% - 30px); transform: translateY(-50%); z-index: 2;
+  width: 44px; height: 44px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
+  display: none; align-items: center; justify-content: center;
+  background: var(--card); color: var(--brown-deep); box-shadow: var(--shadow);
+  transition: transform .12s, opacity .12s;
+}
+.video-nav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.video-nav:hover { transform: translateY(-50%) scale(1.06); }
+.video-nav:disabled { opacity: .35; cursor: default; transform: translateY(-50%); }
+.video-nav:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--card), 0 0 0 7px var(--pink-deep); }
+.video-nav.prev { left: -8px; }
+.video-nav.next { right: -8px; }
+@media (min-width: 620px) { .video-nav { display: flex; } .video-nav.prev { left: -40px; } .video-nav.next { right: -40px; } }
+.video-dots { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+.video-dots button { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
+.video-dots button[aria-current="true"] { width: 26px; border-radius: 5px; background: var(--pink-deep); }
+.video-dots button:focus-visible { outline: 2px solid var(--pink-deep); outline-offset: 3px; }
+.video-carousel.single .video-nav, .video-carousel.single .video-dots { display: none; }
+
 /* ── 2026-11：首頁功能卡手機版＝兩欄小卡（owner 2026-11-17 方案 A）。
    每張只有小圖＋標題＋一句短話，整張卡都能點；620px 以上（平板、電腦）完全不受影響 ── */
 .feature-short { display: none; }
