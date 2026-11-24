@@ -21,7 +21,7 @@
   <meta property="og:image" content="https://yohaha1202.github.io/yoyoagain/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=23">
+  <link rel="stylesheet" href="style.css?v=24">
 
   <script type="application/ld+json">
   {
@@ -89,6 +89,19 @@
     </div>
   </section>
 
+  <section class="videos section" aria-label="穿搭日記影片">
+    <div class="video-row">
+      <figure class="video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="assets/video/diary-poster.jpg" width="720" height="1280" aria-label="影片：出門穿上新衣服，回家拍照寫穿搭日記，今天穿的衣服、誰穿、合不合身都記下來">
+            <source src="assets/video/diary.mp4" type="video/mp4">
+          </video>
+          <button class="video-play" type="button" hidden aria-label="播放影片：穿搭日記"><span class="video-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.86l10.4-6.4a1 1 0 0 0 0-1.72L9.52 4.74A1 1 0 0 0 8 5.6z"/></svg></span></button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
   <section class="section topic-shot two">
     <img src="assets/img/screen8.webp" alt="寫穿搭日記：照片、今天的穿搭、誰穿、合不合身" width="360" height="747" loading="lazy">
     <img src="assets/img/shot-diary-calendar.webp" alt="日曆上的穿搭日記：照片、文字和當天穿的衣服" width="360" height="747" loading="lazy">
@@ -148,5 +161,21 @@
   </div>
   <small>© 2026 <span class="nobr">又又買了</span> YoYoAgain</small>
 </footer>
+<script>
+  // 影片：沒播之前只顯示封面和自己做的播放鈕；按了才開始播、才出現播放列；播完回到封面（同首頁）
+  (function () {
+    document.querySelectorAll('.video-frame').forEach(function (frame) {
+      var v = frame.querySelector('video'), btn = frame.querySelector('.video-play');
+      if (!v || !btn) return;
+      function cover() { v.controls = false; btn.hidden = false; }
+      cover();
+      btn.addEventListener('click', function () {
+        btn.hidden = true; v.controls = true;
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      });
+      v.addEventListener('ended', function () { v.load(); cover(); });
+    });
+  })();
+</script>
 </body>
 </html>
