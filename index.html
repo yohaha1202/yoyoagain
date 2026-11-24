@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>又又買了｜童裝 App・美衣記帳・智慧衣櫃：尺寸紀錄、衣櫃整理、二手轉售</title>
   <meta name="description" content="又又買了是給媽媽用的童裝 App（iPhone），也是美衣記帳本和智慧衣櫃：童裝買了什麼、哪個尺寸、花多少都記下來，訂單截圖丟進來自動辨識，到貨月份一看就知道；要轉售二手童裝，分享卡片和販售文案一鍵產好。">
-  <meta name="keywords" content="又又買了,YoYoAgain,童裝 App,童裝,美衣,智慧衣櫃,童裝記帳,美衣記帳,童裝管理,童裝尺寸紀錄,孩子衣服整理,衣櫃整理,衣櫃管理 App,衣櫃黑洞,治裝費,童裝轉售,二手童裝,團購童裝到貨,童裝賣貨便,販售文案,開樓,搭售,穿搭行事曆,截圖匯入,照片編輯,拼圖貼貼紙,組圖,寶貝成長紀錄,手作童裝">
+  <meta name="keywords" content="又又買了,YoYoAgain,童裝 App,童裝,美衣,智慧衣櫃,童裝記帳,美衣記帳,童裝管理,童裝尺寸紀錄,孩子衣服整理,衣櫃整理,衣櫃管理 App,衣櫃黑洞,治裝費,童裝轉售,二手童裝,團購童裝到貨,童裝賣貨便,販售文案,開樓,搭售,穿搭行事曆,穿搭日記,截圖匯入,照片編輯,拼圖貼貼紙,組圖,寶貝成長紀錄,手作童裝">
   <link rel="canonical" href="https://yohaha1202.github.io/yoyoagain/">
   <meta name="theme-color" content="#f8f1e7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1d1814" media="(prefers-color-scheme: dark)">
@@ -59,7 +59,8 @@
       "多個衣櫃（大寶、二寶各一櫃）",
       "又想買了：願望清單與徵文文案",
       "穿搭行事曆",
-      "照片編輯：裁切、旋轉、風格、貼紙，可還原原圖",
+      "穿搭日記：照片＋文字，今日穿搭自動帶入",
+      "照片編輯：裁切、旋轉、風格、貼紙、畫筆馬賽克，可還原原圖",
       "拼圖貼貼紙：多張照片拼成一張、貼紙遮臉",
       "組圖版型與風格：又又買了、拍立得、手帳、膠卷",
       "寶貝成長紀錄：身高、體重、成長曲線",
@@ -209,6 +210,19 @@
           <a class="more-link" href="outfit-planner.html">看穿搭行事曆 →</a>
         </figcaption>
       </figure>
+      <!-- 預留：③ 穿搭日記影片定案後，把檔案放成 assets/video/diary.mp4、assets/video/diary-poster.jpg，再把這段註解的頭尾拿掉。
+      [figure class="video-card"]
+        [div class="video-frame"]
+          [video controls playsinline preload="metadata" poster="assets/video/diary-poster.jpg" width="720" height="1280" aria-label="影片：照片加幾句話寫成穿搭日記，今天的穿搭自動帶入"]
+            [source src="assets/video/diary.mp4" type="video/mp4"]
+          [/video]
+          （播放鈕那一行從上面任一支複製過來，aria-label 改成「播放影片：穿搭日記」）
+        [/div]
+        [figcaption]
+          [a class="more-link" href="outfit-diary.html"]看穿搭日記 →[/a]
+        [/figcaption]
+      [/figure]
+      （用的時候把方括號換回角括號）-->
     </div>
   </section>
 
@@ -226,7 +240,7 @@
       <article class="feature blue">
         <img class="feature-icon" src="assets/img/feature-icons-v2/photo-edit.jpg" alt="" width="256" height="256">
         <h3>照片編輯、<wbr>拼圖貼貼紙</h3>
-        <p><span class="feature-long">裁切、旋轉、換風格、貼貼紙，照片點開就能修；穿拍照還能一次拼最多 16 張，貼紙遮臉也可愛。 </span><span class="feature-short">裁切、<wbr>貼貼紙、<wbr>拼圖</span><a class="more-link" href="photo-editing.html">看更多 →</a></p>
+        <p><span class="feature-long">裁切、旋轉、換風格、貼貼紙、畫筆馬賽克，照片點開就能修；穿拍照還能一次拼最多 16 張，貼紙遮臉也可愛。 </span><span class="feature-short">裁切、<wbr>貼貼紙、<wbr>拼圖</span><a class="more-link" href="photo-editing.html">看更多 →</a></p>
       </article>
       <article class="feature yellow">
         <img class="feature-icon" src="assets/img/feature-icons-v2/collage.jpg" alt="" width="256" height="256">
@@ -254,36 +268,41 @@
         <p><span class="feature-long">把衣服排進行事曆，每天要穿什麼一目瞭然，讓你的美衣都能被穿到。 </span><span class="feature-short">每天穿什麼，<wbr>先排好</span><a class="more-link" href="outfit-planner.html">看更多 →</a></p>
       </article>
       <article class="feature blue">
+        <img class="feature-icon" src="assets/img/feature-icons-v2/diary.jpg" alt="" width="256" height="256">
+        <h3>穿搭日記</h3>
+        <p><span class="feature-long">今天穿了哪件、去了哪裡，照片加幾句話記下來；行事曆排好的穿搭會自動帶入，所有日記一次看一個月。 </span><span class="feature-short">照片加幾句話<wbr>記下來</span><a class="more-link" href="outfit-diary.html">看更多 →</a></p>
+      </article>
+      <article class="feature yellow">
         <img class="feature-icon" src="assets/img/feature-icons-v2/stats.jpg" alt="" width="256" height="256">
         <h3>童裝美衣記帳、<wbr>花費統計</h3>
         <p><span class="feature-long">童裝美衣買了多少、賣了多少，這個月存入、到貨、結帳的物品全部整理給你看。 </span><span class="feature-short">花費、<wbr>賣出都算好</span><a class="more-link" href="kids-clothes-budget.html">看更多 →</a></p>
       </article>
-      <article class="feature yellow">
+      <article class="feature pink">
         <img class="feature-icon" src="assets/img/feature-icons-v2/wishlist.jpg" alt="" width="256" height="256">
         <h3>又想買了</h3>
         <p><span class="feature-long">還沒買到的先記起來，徵文文案幫你產好，馬上徵馬上買到。 </span><span class="feature-short">想買的先記起來</span><a class="more-link" href="wanted-post.html">看更多 →</a></p>
       </article>
-      <article class="feature pink">
+      <article class="feature blue">
         <img class="feature-icon" src="assets/img/feature-icons-v2/size-brand.jpg" alt="" width="256" height="256">
         <h3>童裝尺寸、<wbr>品牌分清楚</h3>
         <p><span class="feature-long">同一款買了好幾個尺寸也能分開記，照品牌、尺寸、版型分好，要找哪一件，搜尋一下就有。 </span><span class="feature-short">同款多尺寸，<wbr>分開記</span><a class="more-link" href="wardrobe-organizing.html">看更多 →</a></p>
       </article>
-      <article class="feature blue">
+      <article class="feature yellow">
         <img class="feature-icon" src="assets/img/feature-icons-v2/arrival.jpg" alt="" width="256" height="256">
         <h3>到貨追蹤</h3>
         <p><span class="feature-long">跟團購、追手作，結帳月份和到貨月份記下來，哪些還沒到一看就知道。 </span><span class="feature-short">還沒到的一眼看完</span><a class="more-link" href="handmade-group-buy.html">看更多 →</a></p>
       </article>
-      <article class="feature yellow">
+      <article class="feature pink">
         <img class="feature-icon" src="assets/img/feature-icons-v2/wardrobes.jpg" alt="" width="256" height="256">
         <h3>大寶、<wbr>二寶各一櫃</h3>
         <p><span class="feature-long">孩子衣服分開放，每個人有自己的智慧衣櫃，還能再分抽屜；暫時不想看的收起來，清單馬上清爽。 </span><span class="feature-short">每個孩子一個衣櫃</span><a class="more-link" href="wardrobe-organizing.html">看更多 →</a></p>
       </article>
-      <article class="feature pink">
+      <article class="feature blue">
         <img class="feature-icon" src="assets/img/feature-icons-v2/growth.jpg" alt="" width="256" height="256">
         <h3>寶貝成長紀錄</h3>
         <p><span class="feature-long">身高、體重一筆一筆記下來，長大多少看成長曲線就知道，買衣服挑尺寸也有個底。 </span><span class="feature-short">身高體重都記下來</span><a class="more-link" href="baby-growth.html">看更多 →</a></p>
       </article>
-      <article class="feature blue">
+      <article class="feature yellow">
         <img class="feature-icon" src="assets/img/feature-icons-v2/icloud.jpg" alt="" width="256" height="256">
         <h3>iCloud 同步、<wbr>換機不怕</h3>
         <p><span class="feature-long">資料存在你自己的 iCloud，換手機登入同一個 Apple ID 就回來，也能匯出完整備份。 </span><span class="feature-short">換手機資料跟著走</span><a class="more-link" href="support.html#sync">看更多 →</a></p>
@@ -323,6 +342,10 @@
       <figure>
         <img src="assets/img/screen7.webp" alt="寶貝成長紀錄：最新的身高、體重，下面是每一次量的紀錄" width="360" height="747">
         <figcaption>寶貝又長大了<br>身高體重通通記下來</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/screen8.webp" alt="穿搭日記：照片、文字和今天的穿搭一起記下來" width="360" height="747">
+        <figcaption>穿過的也記下來<br>今天穿搭自動帶入</figcaption>
       </figure>
     </div>
     <p class="screens-note">截圖中的美衣感謝「Lumistar 小星星手作訂製樂園」授權 <span class="heart" aria-hidden="true">♡</span><br>價格均為示意。</p>
@@ -392,6 +415,7 @@
       <a href="photo-editing.html">照片編輯</a>
       <a href="handmade-group-buy.html">到貨追蹤</a>
       <a href="outfit-planner.html">穿搭行事曆</a>
+      <a href="outfit-diary.html">穿搭日記</a>
       <a href="baby-growth.html">寶貝成長紀錄</a>
       <a href="kids-clothes-budget.html">記帳統計</a>
     </nav>
