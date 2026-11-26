@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>隱私權政策｜又又買了 YoYoAgain</title>
-  <meta name="description" content="又又買了（YoYoAgain）隱私權政策：iPhone 與 Android 通用：沒有伺服器、沒有帳號、沒有廣告，資料只存在你自己的裝置、iCloud 或備份檔。">
+  <meta name="description" content="又又買了（YoYoAgain）隱私權政策：不收集個人資料，資料只存在你的裝置和你自己的 iCloud。">
   <link rel="canonical" href="https://yohaha1202.github.io/yoyoagain/privacy.html">
   <meta name="theme-color" content="#f8f1e7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1d1814" media="(prefers-color-scheme: dark)">
@@ -33,91 +33,69 @@
   <section class="section topic-hero">
     <nav class="crumbs" aria-label="目前位置"><a href="./"><span class="nobr">又又買了</span></a> › 隱私權政策</nav>
     <h1>隱私權政策</h1>
-    <p class="lead-text">又又買了（YoYoAgain）— 最後更新：2026 年 11 月 26 日（iPhone 與 Android 通用）</p>
+    <p class="lead-text">又又買了（YoYoAgain）— 最後更新：2026 年 4 月 8 日</p>
   </section>
 
   <section class="section legal-body">
     <div class="legal-card">
       <h2>總則</h2>
-      <p>「又又買了」（以下簡稱本 App）有 iPhone（iOS）和 Android 兩個版本，這份政策兩邊通用，不同的地方會分開寫。簡單說：<strong>我們沒有伺服器、沒有帳號、沒有廣告、沒有分析工具，開發者看不到你 App 裡的資料</strong>。</p>
+      <p>「又又買了」（以下簡稱本 App）尊重並保護使用者的個人隱私。本政策說明本 App 如何處理你的資料。簡單來說：<strong>本 App 不會將任何資料傳輸至開發者的伺服器，開發者亦無法存取你的個人資料</strong>。</p>
     </div>
 
     <div class="legal-card">
-      <h2>我們沒有收集你的資料</h2>
-      <p>本 App 沒有由開發者維運的伺服器，也不需要註冊或登入。你建立的資料只在你自己的手機、你自己的 iCloud（iPhone）或你自己存的備份檔裡。</p>
+      <h2>我們不收集任何資料</h2>
+      <p>本 App 不會收集、儲存或傳輸任何個人識別資訊到開發者的伺服器，且本 App 不提供由開發者維運的伺服器。所有資料僅保留在你的裝置與你個人的 iCloud 帳號中。</p>
       <ul>
         <li>不收集姓名、Email、電話、地址</li>
-        <li>沒有帳號、沒有廣告、沒有分析或追蹤工具</li>
-        <li>不使用廣告 ID（iOS 的 IDFA / IDFV、Android 的 Advertising ID 都不碰）</li>
+        <li>不收集裝置識別碼（IDFA / IDFV）</li>
+        <li>不使用任何第三方分析、廣告、追蹤 SDK</li>
         <li>不使用 cookies 或類似的追蹤技術</li>
       </ul>
     </div>
 
     <div class="legal-card">
-      <h2>資料存在哪裡</h2>
-      <p>你在 App 裡建立的商品、品牌、照片、買家名字、寶寶資料等，存放的位置如下：</p>
+      <h2>資料儲存位置</h2>
+      <p>你在 App 中建立的所有資料（商品、品牌、照片、訂閱狀態快取等）僅儲存於：</p>
       <ul>
-        <li><strong>iPhone</strong>：存在你的手機裡。如果你開啟 iCloud 同步，也會存在你自己的 iCloud 帳號（透過 Apple 的 CloudKit），用來跨裝置同步。開發者無法存取你的 iCloud 資料，傳輸與儲存由 Apple 負責，依 Apple 的隱私權政策處理。</li>
-        <li><strong>Android</strong>：只存在你的手機裡（App 專屬空間，其他 App 讀不到）。Android 版<strong>沒有雲端同步</strong>。</li>
+        <li><strong>你的裝置本機</strong>（透過 SwiftData / 檔案系統 / UserDefaults）</li>
+        <li><strong>你個人的 iCloud 帳號</strong>（透過 Apple 提供的 CloudKit 服務，用於跨裝置同步）</li>
       </ul>
-      <p>App 密碼鎖不會存你的密碼原文；生物辨識（Face ID／指紋／臉部）由系統處理，App 拿不到你的生物特徵資料。</p>
-    </div>
-
-    <div class="legal-card">
-      <h2>辨識文字、去背與第三方服務</h2>
-      <ul>
-        <li><strong>iPhone</strong>：文字辨識、去背等 AI 功能都在手機上完成，照片不會傳出去。</li>
-        <li><strong>Android</strong>：使用 Google ML Kit 在手機上辨識文字、去背，你的照片和內容不會被傳出去。不過 ML Kit 會把<strong>匿名的診斷資訊</strong>（裝置資訊、App 資訊、每次安裝產生的一組 ID、效能數據與錯誤紀錄）以 HTTPS 傳給 Google，用於診斷與使用分析。這組 ID 不用來識別你本人，Google 說明不會轉給第三方，開發者也拿不到這些資料。詳情見 <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener">Google ML Kit 資料揭露說明</a>。</li>
-      </ul>
+      <p>本 App 開發者無權限、也無能力存取你的 iCloud 資料。CloudKit 資料的存取權僅屬於你自己。</p>
+      <p>CloudKit 與 iCloud 為 Apple 提供之服務，資料的傳輸、同步與儲存由 Apple 負責處理，並依其隱私權政策執行。</p>
     </div>
 
     <div class="legal-card">
       <h2>App 權限說明</h2>
       <ul>
-        <li><strong>相機</strong>：iPhone 需要授權相機才能拍商品照；Android 則是打開手機內建的相機 App 拍照，本 App 不需要相機權限。</li>
-        <li><strong>相簿</strong>：iPhone 用來選照片或把組合圖存回相簿。Android 用系統的照片選擇器，App 只會拿到你挑的那幾張；只有 Android 8–9 為了把圖存進相簿，會要求儲存權限。</li>
+        <li><strong>相機</strong>：用於拍攝商品照片，照片僅儲存在你的裝置與 iCloud 中。</li>
+        <li><strong>相簿</strong>：用於選擇既有照片或將組合圖片存回相簿，皆由你主動操作。</li>
       </ul>
-      <p>你可以自由選擇是否授權，沒授權的話，部分功能可能無法使用。</p>
+      <p>你可以自由選擇是否授權，若未授權，部分功能可能無法使用。</p>
     </div>
 
     <div class="legal-card">
       <h2>訂閱與付款</h2>
-      <p>本 App 提供 Pro 版訂閱（月訂閱與年訂閱）。付款全部由商店處理，本 App 只會收到「有沒有訂閱」的結果，<strong>不會經手任何信用卡或付款資料</strong>。</p>
-      <ul>
-        <li><strong>iPhone</strong>：由 Apple App Store（StoreKit）處理，見 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a>。</li>
-        <li><strong>Android</strong>：由 Google Play 帳款服務處理，見 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</li>
-      </ul>
-      <p>若有免費試用，內容以各商店的訂閱頁面為準。你可以隨時到 iPhone 的「設定」→「Apple ID」→「訂閱項目」，或 Google Play 的「付款和訂閱」→「訂閱」管理或取消。</p>
-    </div>
-
-    <div class="legal-card">
-      <h2>備份、匯出與診斷信</h2>
-      <ul>
-        <li><strong>備份檔與 CSV</strong>：你匯出的備份檔和 CSV 裡有你全部的資料（含買家名字、寶寶資料、照片）。<strong>Android 的備份檔沒有加密</strong>，會存在你自己選的位置（可能是雲端硬碟），請自己妥善保管。</li>
-        <li><strong>診斷信</strong>：只有你自己確認要寄，App 才會打開郵件 App，內容只有系統版本、App 版本和時間，你看得到、也可以不寄。寄出後，我們只會收到那封信的內容。</li>
-        <li><strong>分享</strong>：分享文案、圖片時會打開系統的分享選單，由你選要傳給誰，App 本身不會上傳。</li>
-      </ul>
+      <p>本 App 提供 Pro 版訂閱（月訂閱與年訂閱），所有付款流程由 Apple App Store 處理。本 App 僅透過 Apple StoreKit 接收訂閱狀態結果，<strong>不會經手任何信用卡或付款資料</strong>。付款相關資料的處理請參閱 <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 隱私權政策</a>。</p>
+      <p>新用戶可享月訂閱 1 個月免費試用。你可隨時於裝置的「設定」→「Apple ID」→「訂閱項目」管理或取消訂閱。</p>
     </div>
 
     <div class="legal-card">
       <h2>兒童隱私</h2>
       <p>本 App 不針對未滿 13 歲兒童設計，也不會主動收集任何兒童資料。如有相關疑慮請與我們聯絡。</p>
     </div>
-
     <div class="legal-card">
       <h2>資料保存期間</h2>
-      <p>開發者端沒有保存任何資料。資料只留在你的裝置、你自己的 iCloud 或你自己的備份檔裡，保存多久取決於你什麼時候刪除。</p>
+      <p>本 App 不會在開發者端保存任何資料。所有資料僅保留於你的裝置或你的個人 iCloud 帳號中，保存時間取決於你自行刪除資料、刪除 App 或關閉同步的時間。</p>
     </div>
+
 
     <div class="legal-card">
       <h2>資料刪除</h2>
-      <p>資料都在你自己手上，開發者端沒有可以刪的資料。你可以自己刪：</p>
+      <p>由於我們不擁有你的任何資料，你可以隨時自行刪除：</p>
       <ul>
-        <li><strong>兩個平台</strong>：在 App 的「設定 → 資料管理 → 刪除所有資料」，或直接刪除 App，就會移除手機上的資料</li>
-        <li><strong>iPhone</strong>：如果你曾開啟 iCloud 同步，只刪 App 不一定會移除 iCloud 裡的資料，請到 設定 → Apple ID → iCloud → 管理帳號儲存空間 另外刪除</li>
-        <li><strong>備份檔</strong>：你匯出的備份檔要自己到存放的地方刪</li>
-        <li><strong>Android 系統備份</strong>：Android 系統可能會依你的手機設定，把 App 資料備份到你自己的 Google 帳號，可在手機的 Google 備份設定裡管理</li>
-        <li><strong>Google 的診斷資料</strong>：ML Kit 傳給 Google 的匿名診斷資料，開發者無法存取或刪除，由 Google 依其政策處理</li>
+        <li>刪除 App 即可移除所有本機資料</li>
+        <li>於 設定 → Apple ID → iCloud → 管理帳號儲存空間 中可刪除 iCloud 中的本 App 資料</li>
+        <li>若你曾啟用 iCloud 同步，僅刪除 App 不一定會同時移除已同步到 iCloud 的資料，需另外在 iCloud 設定中手動刪除</li>
       </ul>
     </div>
 
@@ -131,7 +109,7 @@
       <p>對本隱私政策有任何疑問，歡迎來信：</p>
       <p><a href="mailto:yohaha1202@me.com">yohaha1202@me.com</a></p>
     </div>
-
+  
   </section>
 </main>
 
